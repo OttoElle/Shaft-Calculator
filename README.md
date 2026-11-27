@@ -17,11 +17,15 @@ Aufgebaut wie der [Schraubenrechner nach VDI 2230](https://github.com/OttoElle/S
 
 Die Tests in `src/core/calculate.test.ts` rechnen alle drei Beispiele aus DIN 743 Beiblatt 1 (07/2024) nach, einschließlich der Zwischenergebnisse. Die Abweichungen liegen unter 1 %.
 
+**Schritt 2: Entwurfsberechnung** (`src/core/design.ts`)
+
+- Überschlägiger Mindestdurchmesser aus dem Vergleichsmoment Mv = √(Mb² + 0,75 · (α0 · T)²) und einer zulässigen Spannung mit geschätztem Gesamteinflussfaktor. Dieser Ansatz ist nicht Teil der DIN 743 und wird auch so gekennzeichnet.
+- Mindestdurchmesser nach DIN 743 durch Rückwärtsrechnung: Der vollständige Nachweis wird gelöst, bis die maßgebende Sicherheit gerade Smin erreicht, wobei die Kerbmaße maßstäblich mitwachsen. Dazu kommen der auf ganze Millimeter gerundete Durchmesser mit Nachweis und der Verlauf S(d) für ein Diagramm.
+
 Noch nicht enthalten: Nachweis gegen Anriss bei harten Randschichten (DIN 743-1, 5.1.2), Zeitfestigkeit (DIN 743-4).
 
 ## Nächste Schritte
 
-2. Entwurfsberechnung: überschlägiger Mindestdurchmesser aus Torsion bzw. Vergleichsmoment (nicht genormt, klar gekennzeichnet)
 3. Web-App mit Eingabemaske und Schritt-für-Schritt-Rechenweg, Ablaufschema nach Anhang B und Kerbskizze
 4. Später: Schnittgrößen aus einem Wellenmodell mit Lagern und Kräften, Zeitfestigkeit nach Teil 4, PDF-Bericht
 

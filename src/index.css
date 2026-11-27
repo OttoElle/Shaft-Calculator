@@ -1,0 +1,51 @@
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-2: #f0f2f5;
+  --border: #d9dde3;
+  --text: #1a1f29;
+  --muted: #5b6472;
+  --accent: #2563eb;
+  --accent-contrast: #ffffff;
+  --ok: #15803d;
+  --ok-bg: #e8f5ec;
+  --fail: #b91c1c;
+  --fail-bg: #fdecec;
+  --bolt: #2563eb;
+  --plate: #c2410c;
+  --fpa: #b45309;
+  --fkr: #15803d;
+  --cone: rgba(194, 65, 12, 0.18);
+  --part: #e3e6eb;
+  --part-base: #d4d8de;
+  --bolt-part: #c9d6f2;
+
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--text);
+  background: var(--bg);
+  color-scheme: light;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+input,
+select {
+  font: inherit;
+  color: var(--text);
+}
